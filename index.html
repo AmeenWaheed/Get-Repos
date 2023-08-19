@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Repositories</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Tahoma, Arial;
+            background-color: #333;
+            min-height: 100vh;
+        }
+
+        .repos-container {
+            width: 600px;
+            margin: auto;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f8f8f8;
+            padding: 20px;
+            box-shadow: -1px -1px 10px black;
+            border-radius: 12px;
+        }
+
+        .repos-container .get-repo {
+            display: flex;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            padding: 10px 30px;
+            margin-right: 10px;
+            border: 2px solid #4caf50b0;
+            border-radius: 6px;
+}
+input:focus {
+    outline: none;
+    caret-color: blue;
+}
+
+button {
+    font-size: 19px;
+    font-weight: bold;
+    background-color: rgb(76 175 80 / 75%);
+    color: white;
+    padding: 6px 13px;
+    cursor: pointer;
+    transition: .3s;
+    border: 2px solid green;
+    border-radius: 6px;
+}
+
+button:hover {
+    background-color: rgb(76 175 80);
+}
+
+.show-data {
+    padding: 20px;
+    background-color: #e0e0e0;
+}
+
+.repo-box {
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="repos-container">
+        <div class="get-repo">
+            <input type="text" placeholder="Github Username">
+            <button class="get-btn">Get Repos</button>
+        </div>
+        <div class="show-data">
+            <span>No Data to Show</span>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
